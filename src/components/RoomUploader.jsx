@@ -205,7 +205,7 @@ const RoomUploader = () => {
     setError(null);
 
     try {
-      const res = await axios.post('http://localhost:5000/api/analyze', formData, {
+      const res = await axios.post('https://rentvip-backend.onrender.com/api/analyze', formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         },

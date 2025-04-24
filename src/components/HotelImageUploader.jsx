@@ -191,7 +191,7 @@ const HotelImageUploader = () => {
 
       console.log('Sending hotel analysis request with data:', Object.fromEntries(hotelFormData.entries())); // Log form data
 
-      const hotelRes = await axios.post('http://localhost:5000/api/analyze', hotelFormData, {
+      const hotelRes = await axios.post('https://rentvip-backend.onrender.com/api/analyze', hotelFormData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         },
@@ -211,7 +211,7 @@ const HotelImageUploader = () => {
           roomFormData.append('roomId', room.id.toString());
 
           try {
-            const roomRes = await axios.post('http://localhost:5000/api/analyze', roomFormData, {
+            const roomRes = await axios.post('https://rentvip-backend.onrender.com/api/analyze', roomFormData, {
               headers: {
                 'Content-Type': 'multipart/form-data'
               },
